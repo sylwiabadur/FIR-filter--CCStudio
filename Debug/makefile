@@ -8,8 +8,11 @@ CG_TOOL_ROOT := C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
+"./mainBEFORE.obj" \
+"./main3.obj" \
 "./main.obj" \
 "./lab6.obj" \
+"../55xdsph.lib" \
 "../C5515.cmd" \
 -l"rts55h.lib" \
 
@@ -113,7 +116,7 @@ endif
 all: lab6.out
 
 # Tool invocations
-lab6.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+lab6.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C5500 Linker'
 	"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=huge -g --define=c5515 --display_error_number --diag_warning=225 --ptrdiff_size=32 --fp_reassoc=on --asm_source=mnemonic -z -m"lab6.map" --stack_size=0x200 --heap_size=0x400 -i"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/lib" -i"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/include" --reread_libs --display_error_number --warn_sections --xml_link_info="lab6_linkInfo.xml" --rom_model --sys_stacksize=0x200 -o "lab6.out" $(ORDERED_OBJS)
@@ -123,8 +126,8 @@ lab6.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(C5500_EXECUTABLE_OUTPUTS__QUOTED) "lab6.out"
-	-$(RM) "main.pp" 
-	-$(RM) "lab6.obj" "main.obj" 
+	-$(RM) "main.pp" "main3.pp" "mainBEFORE.pp" 
+	-$(RM) "lab6.obj" "main.obj" "main3.obj" "mainBEFORE.obj" 
 	-$(RM) "lab6.pp" 
 	-@echo 'Finished clean'
 	-@echo ' '
