@@ -1,1 +1,1 @@
-"./mainBEFORE.obj" "./main3.obj" "./main.obj" "./lab6.obj" "../55xdsph.lib" "../C5515.cmd" -l"rts55h.lib" 
+"./mainDSPLIB.obj" "./mainCIMPL.obj" "./main.obj" "./lab6.obj" "../55xdsph.lib" "../C5515.cmd" -l"rts55h.lib" 

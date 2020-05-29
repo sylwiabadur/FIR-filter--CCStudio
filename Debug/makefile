@@ -8,8 +8,8 @@ CG_TOOL_ROOT := C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
-"./mainBEFORE.obj" \
-"./main3.obj" \
+"./mainDSPLIB.obj" \
+"./mainCIMPL.obj" \
 "./main.obj" \
 "./lab6.obj" \
 "../55xdsph.lib" \
@@ -126,8 +126,8 @@ lab6.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(C5500_EXECUTABLE_OUTPUTS__QUOTED) "lab6.out"
-	-$(RM) "main.pp" "main3.pp" "mainBEFORE.pp" 
-	-$(RM) "lab6.obj" "main.obj" "main3.obj" "mainBEFORE.obj" 
+	-$(RM) "main.pp" "mainCIMPL.pp" "mainDSPLIB.pp" 
+	-$(RM) "lab6.obj" "main.obj" "mainCIMPL.obj" "mainDSPLIB.obj" 
 	-$(RM) "lab6.pp" 
 	-@echo 'Finished clean'
 	-@echo ' '

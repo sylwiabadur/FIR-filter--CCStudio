@@ -17,17 +17,17 @@ main.obj: ../main.c $(GEN_OPTS) $(GEN_HDRS)
 	@echo 'Finished building: $<'
 	@echo ' '
 
-main3.obj: ../main3.c $(GEN_OPTS) $(GEN_HDRS)
+mainCIMPL.obj: ../mainCIMPL.c $(GEN_OPTS) $(GEN_HDRS)
 	@echo 'Building file: $<'
 	@echo 'Invoking: C5500 Compiler'
-	"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=huge -g --include_path="C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/include" --define=c5515 --display_error_number --diag_warning=225 --ptrdiff_size=32 --fp_reassoc=on --asm_source=mnemonic --preproc_with_compile --preproc_dependency="main3.pp" $(GEN_OPTS__FLAG) "$<"
+	"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=huge -g --include_path="C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/include" --define=c5515 --display_error_number --diag_warning=225 --ptrdiff_size=32 --fp_reassoc=on --asm_source=mnemonic --preproc_with_compile --preproc_dependency="mainCIMPL.pp" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
-mainBEFORE.obj: ../mainBEFORE.c $(GEN_OPTS) $(GEN_HDRS)
+mainDSPLIB.obj: ../mainDSPLIB.c $(GEN_OPTS) $(GEN_HDRS)
 	@echo 'Building file: $<'
 	@echo 'Invoking: C5500 Compiler'
-	"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=huge -g --include_path="C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/include" --define=c5515 --display_error_number --diag_warning=225 --ptrdiff_size=32 --fp_reassoc=on --asm_source=mnemonic --preproc_with_compile --preproc_dependency="mainBEFORE.pp" $(GEN_OPTS__FLAG) "$<"
+	"C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/bin/cl55" -v5515 --memory_model=huge -g --include_path="C:/Program Files/ti/ccsv5/tools/compiler/c5500_4.4.1/include" --define=c5515 --display_error_number --diag_warning=225 --ptrdiff_size=32 --fp_reassoc=on --asm_source=mnemonic --preproc_with_compile --preproc_dependency="mainDSPLIB.pp" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

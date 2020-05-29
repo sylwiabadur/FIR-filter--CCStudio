@@ -13,8 +13,6 @@ int main(void) {
 	int samp_in;
 	int currentIdx;
 
-
-
 	for (i=0;i<243;++i)
 	{
 		sampBuff[i] = samp_in;

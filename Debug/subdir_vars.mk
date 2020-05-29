@@ -14,33 +14,33 @@ ASM_SRCS += \
 
 C_SRCS += \
 ../main.c \
-../main3.c \
-../mainBEFORE.c 
+../mainCIMPL.c \
+../mainDSPLIB.c 
 
 OBJS += \
 ./lab6.obj \
 ./main.obj \
-./main3.obj \
-./mainBEFORE.obj 
+./mainCIMPL.obj \
+./mainDSPLIB.obj 
 
 ASM_DEPS += \
 ./lab6.pp 
 
 C_DEPS += \
 ./main.pp \
-./main3.pp \
-./mainBEFORE.pp 
+./mainCIMPL.pp \
+./mainDSPLIB.pp 
 
 C_DEPS__QUOTED += \
 "main.pp" \
-"main3.pp" \
-"mainBEFORE.pp" 
+"mainCIMPL.pp" \
+"mainDSPLIB.pp" 
 
 OBJS__QUOTED += \
 "lab6.obj" \
 "main.obj" \
-"main3.obj" \
-"mainBEFORE.obj" 
+"mainCIMPL.obj" \
+"mainDSPLIB.obj" 
 
 ASM_DEPS__QUOTED += \
 "lab6.pp" 
@@ -50,7 +50,7 @@ ASM_SRCS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../main.c" \
-"../main3.c" \
-"../mainBEFORE.c" 
+"../mainCIMPL.c" \
+"../mainDSPLIB.c" 
 
 
